@@ -15,7 +15,7 @@ spring:
   application:
     name: API-GATEWAY
   r2dbc:
-    url: ${JDBC_DATABASE_URL}
+    url: ${R2DBC_DATABASE_URL}
     username: ${SPRING_DATASOURCE_USERNAME}
     password: ${SPRING_DATASOURCE_PASSWORD}
     pool:
@@ -45,19 +45,19 @@ spring:
 #                allbackuri: forward:/ratingServiceFallBack
 
 
-hystrix:
-  command:
-    fallbackcmd:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 4000
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: hystrix.stream
+#hystrix:
+#  command:
+#    fallbackcmd:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 4000
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: hystrix.stream
 
 
 
