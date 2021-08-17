@@ -70,6 +70,6 @@ eureka:
     service-url:
       defaultZone: https://placeur-service-registry.herokuapp.com/eureka
   instance:
-    hostname: 172.17.161.94
+    hostname: 172.17.75.166
 
 
