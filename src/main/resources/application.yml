@@ -16,8 +16,10 @@ spring:
     name: API-GATEWAY
   r2dbc:
     url: ${R2DBC_DATABASE_URL}
-    username: ${SPRING_DATASOURCE_USERNAME}
-    password: ${SPRING_DATASOURCE_PASSWORD}
+    username: ${R2DBC_DATABASE_USERNAME}
+    password: ${R2DBC_DATABASE_PASSWORD}
+    properties:
+      sslMode: REQUIRE
     pool:
       initialSize: 2
       maxSize: 2
