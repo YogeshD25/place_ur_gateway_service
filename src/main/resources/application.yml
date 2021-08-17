@@ -21,6 +21,7 @@ spring:
     properties:
       sslMode: REQUIRE
     pool:
+      enabled: true
       initialSize: 2
       maxSize: 2
 
